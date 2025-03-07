@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bluebook</title>
+  <title>PSAT Score Validation</title>
   <style>
     body {
-      width: 1920px;
-      height: 1080px;
+      width: 100vw; /* Use viewport width */
+      height: 100vh; /* Use viewport height */
       background-color: #c9dfd3;
       display: flex;
       justify-content: center;
@@ -15,35 +15,33 @@
       flex-direction: column;
       font-family: Arial, sans-serif;
       margin: 0;
-      position: relative;
     }
 
     h1 {
-      position: absolute;
-      top: 81.6px;
-      left: 982.6px;
-      margin: 0;
-      font-size: 32px;
-      color: black;
+      margin-bottom: 30px; /* Add some space below the title */
+      font-size: 28px; /* Adjust font size for smaller screens */
+      text-align: center; /* Center the text */
     }
 
     .container {
-      position: absolute;
-      top: 311.8px;
-      left: 645.4px;
       display: flex;
-      gap: 15px;
+      gap: 10px; /* Reduce gap for smaller screens */
+      justify-content: center; /* Center the boxes horizontally */
+      align-items: center; /* Center the boxes vertically */
     }
 
     .input-box {
-      width: 154.2px;
-      height: 228.2px;
+      width: 50px; /* Adjust width for smaller screens */
+      height: 70px; /* Adjust height for smaller screens */
       border: 1px solid black;
-      border-radius: 50.87483176312247px;
+      border-radius: 25px; /* Adjust radius for smaller screens */
       background-color: white;
       text-align: center;
-      font-size: 32px;
+      font-size: 24px; /* Adjust font size for smaller screens */
       color: black;
+      display: flex; /* Use flexbox to center input */
+      justify-content: center;
+      align-items: center;
     }
 
     .input-box input {
@@ -53,8 +51,9 @@
       outline: none;
       background: transparent;
       text-align: center;
-      font-size: 32px;
+      font-size: 24px; /* Adjust font size for smaller screens */
       color: black;
+      -moz-appearance: textfield; /* Firefox */
     }
 
     .input-box input::-webkit-inner-spin-button,
@@ -65,29 +64,14 @@
   </style>
 </head>
 <body>
-
   <h1>PSAT Score Validation</h1>
-
   <div class="container">
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
-    <div class="input-box">
-      <input type="number" min="0" max="9" maxlength="1" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
-    </div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
+    <div class="input-box"><input type="number" min="0" max="9"></div>
   </div>
-
 </body>
 </html>
